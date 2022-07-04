@@ -1,0 +1,104 @@
+@import '_constants.scss';
+
+.play-now {
+  &--background {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(black)), url(/assets/images/index/main-bg.jpg);
+    background-image: linear-gradient(to bottom, transparent 70%, black 100%), url(/assets/images/index/main-bg.jpg);
+  }
+
+  &__title {
+    margin-top: 25vh;
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  &__caption {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  &__button {
+    margin-top: 4vh;
+    padding: 10px 50px 10px 50px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+  }
+
+  .scroller {
+    top: 22vh;
+
+    &__title {
+      font-family: $primary-font, $secondary-font;
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    &__icon {
+      width: 50px;
+
+      path {
+        fill: transparent;
+        stroke-width: 0.5;
+        stroke: $secondary-color;
+        stroke-dasharray: 40;
+        stroke-dashoffset: 0;
+        
+        &:hover {
+          -webkit-animation: caretdown 1s linear forwards;
+          animation: caretdown 1s linear forwards;
+        }
+      }
+    } 
+  }
+}
+
+@-webkit-keyframes caretdown {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 40;
+  }
+  100% {
+    stroke-dashoffset: 80;
+    stroke: $primary-color;
+    fill: transparent;
+  }
+}
+
+@keyframes caretdown {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 40;
+  }
+  100% {
+    stroke-dashoffset: 80;
+    stroke: #ffc107;
+    fill: transparent;
+  }
+}
+
+@media (min-width: 992px) {
+  .play-now {
+    &__title {
+      font-size: 10vh;
+    }
+
+    &__caption {
+      font-size: 3vh;
+    }
+
+    &__button {
+      font-size: 2vh;
+    }
+  
+    .scroller {
+      &__title {
+        font-size: 2vh;
+      }
+    }
+  }
+}

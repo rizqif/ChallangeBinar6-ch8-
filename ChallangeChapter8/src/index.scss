@@ -1,0 +1,15 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body,
+html {
+  color: white;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

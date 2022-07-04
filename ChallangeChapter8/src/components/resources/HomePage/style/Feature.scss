@@ -1,0 +1,143 @@
+@import '_constants.scss';
+
+.feature {
+  &--background {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(50%, transparent), to(black)), url(/assets/images/index/features.jpg);
+    background-image: linear-gradient(black 0%, transparent 50%, black 100%), url(/assets/images/index/features.jpg);
+    background-position: left;
+  }
+
+  &__col--margin-top {
+    margin-top: 30vh;
+  }
+
+  &__small-caption {
+    font-size: 12px;
+  }
+
+  &__big-caption {
+    font-size: 32px;
+  }
+
+  .step {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+
+    &__circle {
+      background-color: $secondary-color;
+      border: 3px solid grey;
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-top: 0px;
+
+      &--complete {
+        visibility: visible;
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+      }
+
+      &--active {
+        visibility: visible;
+        border-color: $secondary-color;
+        background-color: transparent;
+      }
+
+      &--empty {
+        visibility: hidden;
+      }
+    }
+
+    &__line {
+      top: 20px;
+      left: 8px;
+      height: 100%;
+      position: absolute;
+      border-left: 3px solid $secondary-color;
+
+      &--complete {
+        border-left: 3px solid $secondary-color;
+      }
+
+      &--empty {
+        top: 0;
+        height: 150%;
+      }
+    }
+
+    &__content{
+      margin-left: 20px !important;
+    }
+
+    &__content-title {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary-color;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .feature {
+    &__col--margin-top {
+      margin-top: 10vh;
+    }
+
+    &__small-caption {
+      font-size: 2vw;
+    }
+    
+    &__big-caption {
+      font-size: 6.5vw;
+    }
+
+    .step {
+      &__content-title {
+        font-size: 2vw;
+      }
+
+      &__content-caption {
+        font-size: 1.5vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .feature {
+    background-position: center;
+
+    &__col--margin-top {
+      margin-top: 20vh;
+    }
+
+    &__small-caption {
+      font-size: 3vw;
+    }
+    
+    &__big-caption {
+      font-size: 7vw;
+    }
+
+    .step {
+      &__content-title {
+        font-size: 3vw;
+      }
+
+      &__content-caption {
+        font-size: 2vw;
+      }
+    }
+  }
+}

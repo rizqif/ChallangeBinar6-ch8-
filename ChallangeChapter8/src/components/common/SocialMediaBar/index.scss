@@ -1,0 +1,202 @@
+@import '_constants.scss';
+
+.social-media-bar {
+  background-color: black;
+  height: 30vh;
+
+  a {
+    font-family: $primary-font, $secondary-font;
+    text-decoration: none;
+    color: $secondary-color;
+    font-size: 14px;
+    margin: 0 2vw;
+    word-break: keep-all;
+  }
+
+  &__logo {
+    white-space: nowrap;
+    -webkit-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+
+    &:hover {
+      -webkit-transition: all 0.8s ease 0s;
+      transition: all 0.8s ease 0s;
+      color: $primary-color !important;
+    }
+
+    path {
+      fill: $secondary-color;
+      stroke-width: 0.5;
+      stroke: $secondary-color;
+    }
+
+    &--facebook path {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 0;
+
+      &:hover {
+        -webkit-animation: facebookIcon 1s linear forwards;
+                animation: facebookIcon 1s linear forwards;
+
+                @-webkit-keyframes facebookIcon {
+                  0% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 60;
+                    stroke: $primary-color;
+                    fill: $primary-color;
+                  }
+                }
+                
+                @keyframes facebookIcon {
+                  0% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 60;
+                    stroke: $primary-color;
+                    fill: $primary-color;
+                  }
+                }
+      }
+    }
+
+    &--twitter path {
+      stroke-dasharray: 74;
+      stroke-dashoffset: 0;
+
+      &:hover {
+        -webkit-animation: twitterIcon 1s linear forwards;
+                animation: twitterIcon 1s linear forwards;
+        
+                @-webkit-keyframes twitterIcon {
+                  0% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 74;
+                    stroke: $primary-color;
+                    fill: $primary-color;
+                  }
+                }
+                
+                @keyframes twitterIcon {
+                  0% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 74;
+                    stroke: $primary-color;
+                    fill: $primary-color;
+                  }
+                }
+      }
+    }
+
+    &--youtube path {
+      fill: #FF1313;
+      stroke: #FF1313;
+      stroke-dasharray: 77;
+      stroke-dashoffset: 0;
+
+      &:hover {
+        -webkit-animation: youtubeIcon 1s linear forwards;
+                animation: youtubeIcon 1s linear forwards;
+
+                @-webkit-keyframes youtubeIcon {
+                  0% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 77;
+                    stroke: $primary-color;
+                    fill: $primary-color;
+                  }
+                }
+                
+                @keyframes youtubeIcon {
+                  0% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 77;
+                    stroke: $primary-color;
+                    fill: $primary-color;
+                  }
+                }
+      }
+    }
+
+    &--twitch path {
+      stroke-dasharray: 70;
+      stroke-dashoffset: 0;
+
+      &:hover {
+        -webkit-animation: twitchIcon 1s linear forwards;
+                animation: twitchIcon 1s linear forwards;
+
+                @-webkit-keyframes twitchIcon {
+                  0% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 70;
+                    stroke: $primary-color;
+                    fill: $primary-color;
+                  }
+                }
+                
+                @keyframes twitchIcon {
+                  0% {
+                    stroke-dashoffset: 0;
+                    fill: transparent;
+                  }
+                  100% {
+                    stroke-dashoffset: 70;
+                    stroke: $primary-color;
+                    fill: $primary-color;
+                  }
+                }
+      }
+    }
+  }
+
+  hr {
+    border-top: 1px solid grey;
+  }
+}
+
+.footer {
+  &__copyright {
+    font-size: 14px;
+    color: grey;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .social-media-bar {
+    height: 22vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .social-media-bar {
+    height: 17vh;
+  }
+  
+  .footer .col-lg-6 {
+    text-align: right !important;
+  }
+
+  .footer .col-lg-4 {
+    text-align: left;
+  }
+}

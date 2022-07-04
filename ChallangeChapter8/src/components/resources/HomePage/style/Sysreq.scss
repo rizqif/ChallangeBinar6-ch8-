@@ -1,0 +1,101 @@
+@import '_constants.scss';
+
+.sysreq {
+  &--background {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(50%, transparent), to(black)), url(/assets/images/index/requirements.png);
+    background-image: linear-gradient(black 0%, transparent 50%, black 100%), url(/assets/images/index/requirements.png);
+    padding: 10vh 0px;
+  }
+
+  &__caption {
+    font-size: 3.25vw;
+  }
+
+  &__title {
+    font-size: 6vw;
+    padding-bottom: 5vh;
+  }
+
+  .table {
+    border: 1px solid grey;
+
+    &__aspect {
+      color: $primary-color;
+      font-size: 5vw;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    &__spec {
+      color: $secondary-color;
+      font-size: 3.5vw;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .sysreq {
+    &__caption {
+      font-size: 3vw;
+    }
+
+    &__title {
+      font-size: 5.5vw;
+    }
+
+    .table {
+      &__aspect {
+        font-size: 3.5vw;
+      }
+
+      &__spec {
+        font-size: 2.5vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .sysreq {
+    &__caption {
+      font-size: 2vw;
+    }
+
+    &__title {
+      font-size: 5vw;
+    }
+
+    .table {
+      &__aspect {
+        font-size: 3vw;
+      }
+
+      &__spec {
+        font-size: 2vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .sysreq {
+    &__caption {
+      font-size: 1vw;
+    }
+
+    &__title {
+      font-size: 3vw;
+    }
+
+    .table {
+      &__aspect {
+        font-size: 2vw;
+      }
+
+      &__spec {
+        font-size: 1.25vw;
+      }
+    }
+  }
+}

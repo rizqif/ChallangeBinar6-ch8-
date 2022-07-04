@@ -1,0 +1,57 @@
+@import '_constants.scss';
+
+.newsletter {
+  &--background {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(10%, transparent), color-stop(90%, transparent), to(black)), url(/assets/images/index/newsletter-bg.jpg);
+    background-image: linear-gradient(black 0%, transparent 10%, transparent 90%, black 100%), url(/assets/images/index/newsletter-bg.jpg);
+    height: 120vh;
+  }
+
+  &__caption {
+    font-size: 16px;
+    margin-top: 10vh;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+
+  &__body {
+    font-size: 12px;
+  }
+
+  .newsletter-form {
+    &__email-input {
+      border: 1px solid grey;
+      font-size: 20px;
+      color: $primary-color;
+
+      &-label {
+        color: grey;
+        position: absolute;
+        font-size: 10px;
+        left: 18px;
+        top: 18px;
+      }
+    }
+
+    &__button {
+      padding: 9px;
+      font-weight: bold;
+    }
+
+    ::placeholder {
+      color: $primary-color !important;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .newsletter {
+    &__title {
+      font-size: 44px;
+    }
+  }
+}
